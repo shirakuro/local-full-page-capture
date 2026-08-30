@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Full Page Capture Settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="settings-shell">
+      <header class="settings-header">
+        <p class="eyebrow">Local Full Page Capture</p>
+        <h1>保存ファイル名の設定</h1>
+      </header>
+
+      <form id="settings-form" class="settings-form">
+        <section class="field-group">
+          <label for="source">名前に使う情報</label>
+          <select id="source" name="source">
+            <option value="title">ページタイトル</option>
+            <option value="url">URL</option>
+            <option value="title-url">ページタイトル + URL</option>
+          </select>
+        </section>
+
+        <section class="field-group">
+          <label for="folderName">保存フォルダ名</label>
+          <input id="folderName" name="folderName" type="text" autocomplete="off">
+        </section>
+
+        <section class="switch-row">
+          <div>
+            <label for="includeNumber">連番を付ける</label>
+            <p>例: 001, 002, 003</p>
+          </div>
+          <input id="includeNumber" name="includeNumber" type="checkbox">
+        </section>
+
+        <div class="number-grid">
+          <section class="field-group">
+            <label for="nextNumber">次の番号</label>
+            <input id="nextNumber" name="nextNumber" type="number" min="1" step="1">
+          </section>
+
+          <section class="field-group">
+            <label for="numberPadding">桁数</label>
+            <input id="numberPadding" name="numberPadding" type="number" min="1" max="8" step="1">
+          </section>
+        </div>
+
+        <section class="switch-row">
+          <div>
+            <label for="includeTimestamp">日時を付ける</label>
+            <p>同名ファイルの上書きや混乱を避けやすくします</p>
+          </div>
+          <input id="includeTimestamp" name="includeTimestamp" type="checkbox">
+        </section>
+
+        <section class="preview">
+          <span>保存名プレビュー</span>
+          <code id="filename-preview"></code>
+        </section>
+
+        <div class="actions">
+          <button type="button" id="reset-button">初期設定に戻す</button>
+          <button type="submit">保存</button>
+        </div>
+
+        <p id="status" class="status" role="status"></p>
+      </form>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>

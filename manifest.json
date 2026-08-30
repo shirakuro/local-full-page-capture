@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Local Full Page Capture",
+  "description": "Capture the current web page from top to bottom and save it as one PNG.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Capture full page"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "options_page": "options/options.html",
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "scripting",
+    "storage"
+  ]
+}
