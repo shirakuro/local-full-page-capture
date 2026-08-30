@@ -7,10 +7,10 @@ Chromeで現在のページ全体を1枚のPNGとして保存する、自分用�
 1. Chromeで `chrome://extensions` を開きます。
 2. 右上の「デベロッパー モード」をオンにします。
 3. 「パッケージ化されていない拡張機能を読み込む」を押します。
-4. このフォルダを選びます。
+4. このリポジトリをダウンロードして展開したフォルダを選びます。
 
 ```text
-C:\Users\tomoh\Documents\Codex\blog-sns-sai\chrome-full-page-capture
+local-full-page-capture
 ```
 
 ## 使い方
